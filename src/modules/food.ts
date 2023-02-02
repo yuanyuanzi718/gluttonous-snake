@@ -16,15 +16,15 @@ class Food {
   get Y() {
     return this.element.offsetTop;
   }
+
   //修改食物位置的方法
   change() {
-    //生成随机位置
-    //食物的最小位置是0 最大是290
+    //生成随机位置,食物的最小位置是0 最大是290
     let left = Math.round(Math.random() * 29) * 10
     let top = Math.round(Math.random() * 29) * 10
     this.element.style.left = left + 'px';
     this.element.style.top = top + 'px';
   }
 }
-//food成为全局模块暴露出去
+
 export default Food

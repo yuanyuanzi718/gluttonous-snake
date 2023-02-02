@@ -16,10 +16,10 @@ class GameControl {
 
     this.init()
   }
+
   //游戏的初始化，调用后游戏将开始
   init() {
     document.addEventListener('keydown', this.keydownHandler.bind(this))
-    //调用run
     this.run()
   }
   /*ArrowUp
@@ -40,7 +40,6 @@ class GameControl {
 
     //根据方向修改值
     switch (this.direction) {
-
       case 'ArrowUp':
       case 'Up':
         Y -= 10;
@@ -65,13 +64,12 @@ class GameControl {
       this.snake.Y = Y;
     } catch (e) {
       //进入到catch出现异常
-      alert((e as any).message + '游戏结束了,老表！');
+      alert((e as any).message + '游戏结束了,老表!');
       this.isLive = false;
     }
-    // this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
-    this.isLive && setTimeout(this.run.bind(this), 10000)
-
+    this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
   }
+
   //定义方法检查蛇是否吃到食物
   checkEat(X: number, Y: number) {
     if (X === this.food.X && Y === this.food.Y) {
@@ -85,4 +83,5 @@ class GameControl {
 
   }
 }
+
 export default GameControl

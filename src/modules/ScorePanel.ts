@@ -8,7 +8,7 @@ class ScorePanel {
   maxLevel: number;
   //设置一个变量多少分升级
   upScore: number;
-  constructor(maxLevel: number = 10, Score: number = 10) {
+  constructor(maxLevel: number = 10, Score: number = 1) {
     this.scoreSpan = document.getElementById('score')!;
     this.levelEle = document.getElementById('level')!;
     this.maxLevel = maxLevel
@@ -29,9 +29,5 @@ class ScorePanel {
     }
   }
 }
-// const sc = new ScorePanel()
-// for (let i =0 ;i< 200;i++) {
-//     sc.AddScore()
-// }
 
 export default ScorePanel

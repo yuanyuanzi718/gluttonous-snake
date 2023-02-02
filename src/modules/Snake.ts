@@ -14,14 +14,12 @@ class Snake {
   get X() {
     return this.head.offsetLeft;
   }
+
   get Y() {
     return this.head.offsetTop;
   }
+
   set X(value) {
-    console.log(value, 'XXX');
-    console.log(this.X, 'this.X');
-
-
     if (this.X === value) {
       return;
     }
@@ -42,9 +40,8 @@ class Snake {
     this.head.style.left = value + 'px'
     this.checkHeadBody()
   }
+
   set Y(value) {
-    console.log(value, 'YYY');
-    console.log(this.Y, 'this.Y');
     if (this.Y === value) {
       return;
     }
@@ -65,10 +62,12 @@ class Snake {
     this.head.style.top = value + 'px'
     this.checkHeadBody()
   }
+
   //蛇增加身体的方法
   addBody() {
     this.element.insertAdjacentHTML("beforeend", "<div></div>")
   }
+
   //移动身体方法
   moveBody() {
     /*
@@ -88,6 +87,7 @@ class Snake {
       (this.bodies[i] as HTMLElement).style.top = y + 'px';
     }
   }
+
   //检查蛇头是否撞到身体
   checkHeadBody() {
     //获取所有的身体，检查其是否和蛇头的坐标发生重叠
@@ -99,4 +99,5 @@ class Snake {
     }
   }
 }
+
 export default Snake

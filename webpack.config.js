@@ -98,7 +98,6 @@ module.exports = {
     }),
   ],
 
-
   //用来设置引用模块
   resolve: {
     extensions: ['.ts', '.js']
